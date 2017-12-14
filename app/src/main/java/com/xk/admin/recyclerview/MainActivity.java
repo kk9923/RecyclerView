@@ -2,6 +2,7 @@ package com.xk.admin.recyclerview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.xk.admin.recyclerview.ItemDecoration.GridViewDecoration;
+import com.xk.admin.recyclerview.ItemDecoration.LinearLayoutDecoration;
 import com.xk.admin.recyclerview.ItemDecoration.RedItemDecoration;
 
 import java.util.ArrayList;
@@ -30,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
      //   mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
-        mRecyclerView.addItemDecoration(new RedItemDecoration(this));
+        mRecyclerView.addItemDecoration(new GridViewDecoration(this,R.drawable.linearlayoutdecoration));
+       // mRecyclerView.addItemDecoration(new DividerItemDecoration());
         mRecyclerView.setAdapter(new MyAdapter());
     }
     private class MyAdapter extends  RecyclerView.Adapter<MyAdapter.ViewHolder>{

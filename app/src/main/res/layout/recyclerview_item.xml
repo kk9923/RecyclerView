@@ -4,6 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/list_item"
+android:background="#88Ff0000"
+    android:layout_margin="10dp"
     android:layout_height="80dp">
 
 </TextView>
